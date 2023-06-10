@@ -7,7 +7,6 @@ app = FastAPI()
 
 # Enable CORS (Cross-Origin Resource Sharing) to allow requests from the frontend
 origins = [
-    "https://3000-entropy17-microserve-zsz8250jwup.ws-us98.gitpod.io",
     "http://localhost:3000"
 ]
 

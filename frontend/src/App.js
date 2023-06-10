@@ -11,10 +11,10 @@ const App = () => {
   useEffect(() => {
     const fetchTimestamps = async () => {
       try {
-        const responseFastapi = await axios.get('http://0.0.0.0:8000/api/fastapi-timestamp');
-        setFastapiTimestamp(responseFastapi.timestamp);
+        const responseFastapi = await axios.get('http://localhost:8000/api/fastapi-timestamp');
+        setFastapiTimestamp(responseFastapi.data.timestamp);
 
-        const responseNode = await axios.get('/api/node-timestamp');
+        const responseNode = await axios.get('http://localhost:8001/api/node-timestamp');
         setNodeTimestamp(responseNode.data.timestamp);
       } catch (error) {
         console.error('Error fetching timestamps:', error);
